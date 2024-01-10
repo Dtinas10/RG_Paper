@@ -20,6 +20,11 @@ object Program:
                   //  action: Action,
                    weight: Weight = 0.0,
                    activate: Boolean)
+    def pretty:String = this match
+      case e:SimpleEdge =>
+        s"${e.from}-${e.action}->${e.to}"
+      case e:HyperEdge =>
+        s"[${e.from.pretty}]->[${e.to.pretty}]"
 
     /** Returns the action label of any edge */
     def act: Action = this match
@@ -31,7 +36,8 @@ object Program:
                   he:Map[Edge,Set[Edge]],       // hyperedges, from any edge to another edge (initially was from simple edge to any adge)
                   init: State,                  // initial state
                   active: Set[Edge]):           // set of active edges
-
+    override def toString: String =
+      s"$init${active.map(e=>s"\n${e.pretty}").mkString}"
     /** Auxiliary function to collect all states */
     def states:Set[State] = se.keySet + init
     /** Auxiliary function to collect all edges from a given simple edge */
