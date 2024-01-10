@@ -1,0 +1,13 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E107] Syntax Error: C:\Users\DavidTinoco\Desktop\MMA\rgv4\src\main\scala\rgv4\syntax\Program.scala:79:41 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m79 |[0m    [33mval[0m [36mtoActivate[0m   = [33mfor[0m [33mcase[0m HyperEdge(_,to,_,_,[31mtrue[0m)  <-es [33myield[0m to[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                ^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mWrong number of argument patterns for rgv4.syntax.Program.Edge.HyperEdge; expected: (rgv4.syntax.Program.Edge, rgv4.syntax.Program.Edge, rgv4.syntax.Program.Weight, Boolean)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E107] Syntax Error: C:\Users\DavidTinoco\Desktop\MMA\rgv4\src\main\scala\rgv4\syntax\Program.scala:80:41 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m80 |[0m    [33mval[0m [36mtoDeactivate[0m = [33mfor[0m [33mcase[0m HyperEdge(_,to,_,_,[31mfalse[0m) <-es [33myield[0m to[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                ^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mWrong number of argument patterns for rgv4.syntax.Program.Edge.HyperEdge; expected: (rgv4.syntax.Program.Edge, rgv4.syntax.Program.Edge, rgv4.syntax.Program.Weight, Boolean)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
