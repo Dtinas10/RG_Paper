@@ -3770,3 +3770,232 @@ WARNING: Unmatched cancel notification for request id 3723
 2024.01.11 22:47:38 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
 2024.01.11 22:48:41 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
 2024.01.11 23:04:26 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.11 23:07:20 INFO  Shutting down server
+2024.01.11 23:07:20 INFO  shutting down Metals
+2024.01.11 23:07:20 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.11 23:07:20 INFO  Exiting server
+2024.01.11 23:09:45 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.1.
+2024.01.11 23:09:46 WARN  Build server is not auto-connectable.
+2024.01.11 23:09:47 INFO  skipping build import with status 'Dismissed'
+2024.01.11 23:09:47 WARN  Build server is not auto-connectable.
+2024.01.11 23:09:47 WARN  Build server is not auto-connectable.
+2024.01.11 23:09:47 WARN  Build server is not auto-connectable.
+2024.01.11 23:09:48 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.11 23:09:48 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.11 23:09:54 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.11 23:09:57 INFO  time: code lens generation in 6.45s
+2024.01.11 23:09:57 INFO  time: code lens generation in 1.16s
+2024.01.11 23:09:57 INFO  time: code lens generation in 7.92s
+2024.01.11 23:09:57 INFO  time: code lens generation in 6.05s
+2024.01.11 23:09:57 INFO  time: code lens generation in 9.59s
+2024.01.11 23:11:18 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.11 23:11:23 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+scala.meta.tokenizers.TokenizeException: <input>:89: error: unclosed string interpolation
+    ""init = Insert;\n" +
+                       ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getStringPart(LegacyScanner.scala:659)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:357)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.11 23:11:24 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+scala.meta.tokenizers.TokenizeException: <input>:89: error: unclosed multi-line string literal
+    """init = Insert;\n" +
+    ^
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:27)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:26)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter.incompleteInputError$(Reporter.scala:29)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.incompleteInputError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.getRawStringLit(LegacyScanner.scala:567)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchDoubleQuote$1(LegacyScanner.scala:366)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:376)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+jan 11, 2024 11:11:42 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.util.NoSuchElementException: token 249 out of 249
+java.util.concurrent.CompletionException: java.util.NoSuchElementException: token 249 out of 249
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:484)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.NoSuchElementException: token 249 out of 249
+	at scala.meta.tokens.Tokens.apply(Tokens.scala:37)
+	at scala.meta.internal.metals.formatting.MultilineString.scala$meta$internal$metals$formatting$MultilineString$$hasStripMarginSuffix(MultilineString.scala:37)
+	at scala.meta.internal.metals.formatting.MultilineString$$anonfun$collectStringAndInterpolations$1.applyOrElse(MultilineString.scala:371)
+	at scala.meta.internal.metals.formatting.MultilineString$$anonfun$collectStringAndInterpolations$1.applyOrElse(MultilineString.scala:369)
+	at scala.collection.Iterator$$anon$7.hasNext(Iterator.scala:525)
+	at scala.collection.Iterator$$anon$6.hasNext(Iterator.scala:480)
+	at scala.collection.Iterator$$anon$9.hasNext(Iterator.scala:583)
+	at scala.collection.IterableOnceOps.find(IterableOnce.scala:633)
+	at scala.collection.IterableOnceOps.find$(IterableOnce.scala:631)
+	at scala.collection.AbstractIterator.find(Iterator.scala:1300)
+	at scala.meta.internal.metals.formatting.MultilineString.contribute(MultilineString.scala:432)
+	at scala.meta.internal.metals.formatting.OnTypeFormattingProvider.$anonfun$format$5(OnTypeFormattingProvider.scala:69)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionList.loop$1(MetalsEnrichments.scala:285)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionList.acceptFirst(MetalsEnrichments.scala:294)
+	at scala.meta.internal.metals.formatting.OnTypeFormattingProvider.$anonfun$format$4(OnTypeFormattingProvider.scala:68)
+	at scala.Option.map(Option.scala:242)
+	at scala.meta.internal.metals.formatting.OnTypeFormattingProvider.$anonfun$format$3(OnTypeFormattingProvider.scala:56)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.formatting.OnTypeFormattingProvider.$anonfun$format$2(OnTypeFormattingProvider.scala:55)
+	at scala.Option.flatMap(Option.scala:283)
+	at scala.meta.internal.metals.formatting.OnTypeFormattingProvider.format(OnTypeFormattingProvider.scala:53)
+	at scala.meta.internal.metals.MetalsLspService.$anonfun$onTypeFormatting$1(MetalsLspService.scala:1492)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:687)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	... 3 more
+
+2024.01.11 23:12:05 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.11 23:12:09 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.11 23:13:50 INFO  Shutting down server
+2024.01.11 23:13:50 INFO  shutting down Metals
+2024.01.11 23:13:50 INFO  Exiting server
+2024.01.11 23:13:50 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.11 23:14:15 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.1.
+jan 11, 2024 11:14:16 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2024.01.11 23:14:16 WARN  Build server is not auto-connectable.
+2024.01.11 23:14:17 INFO  skipping build import with status 'Dismissed'
+2024.01.11 23:14:16 WARN  Build server is not auto-connectable.
+2024.01.11 23:14:17 WARN  Build server is not auto-connectable.
+2024.01.11 23:14:17 WARN  Build server is not auto-connectable.
+2024.01.11 23:14:17 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.11 23:14:17 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.11 23:14:24 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.11 23:14:26 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+scala.meta.tokenizers.TokenizeException: <input>:53: error: Invalid literal number
+>>>>>>> 4e63991141dea7272efd20d6b10bb3b3958bcb4a
+        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.getFraction(LegacyScanner.scala:814)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:851)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.11 23:14:26 INFO  time: code lens generation in 8.5s
+2024.01.11 23:14:26 INFO  time: code lens generation in 8.52s
+2024.01.11 23:14:26 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+scala.meta.tokenizers.TokenizeException: <input>:53: error: Invalid literal number
+>>>>>>> 4e63991141dea7272efd20d6b10bb3b3958bcb4a
+        ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.checkNoLetter(LegacyScanner.scala:820)
+	at scala.meta.internal.tokenizers.LegacyScanner.getFraction(LegacyScanner.scala:814)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:851)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:335)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.11 23:14:44 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
