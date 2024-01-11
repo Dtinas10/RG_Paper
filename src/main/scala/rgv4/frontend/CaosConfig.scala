@@ -19,17 +19,18 @@ object CaosConfig extends Configurator[RxGr]:
 
   /** Examples of programs that the user can choose from. The first is the default one. */
   val examples = List(
-    "Example" ->     
-"""init = s0;
-l0 = {
-  s0 --> s1 by a,0,
-  s1 -.-> s1 by b,0};
-ln ={
-  ((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),
-  ((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),
-  ((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),
-  ((s0,s1,a,0),((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),0,Bullet,ON)}
-""" -> "Example of Report",
+    "Example" ->
+      """init = s0;
+        |l0 = {
+        |  s0 --> s1 by a,0,
+        |  s1 -.-> s1 by b,0};
+        |ln ={
+        |  ((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),
+        |  ((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),
+        |  ((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),
+        |  ((s0,s1,a,0),((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),0,Bullet,ON)}
+        |""".stripMargin
+      -> "Example of Report",
     // "Ex1" -> Example_ex1,
 
     "Gabbay Example" -> 
