@@ -11,11 +11,20 @@ import rgv4.syntax.Program.Edge.*
 object Show:
 
 
-  /* Put the reactive graph RxGr in Mermaid Code*/
-  def toMermaid(g: RxGr): String = {
+  /** Put the reactive graph RxGr in Mermaid Code*/
+  def toMermaid(g: RxGr): String = _toMermaid(g,"flowchart LR \n","")
+
+  /** Put the RG in Mermaid Code + RG with level0 only in Mermaid Code*/ 
+  def toMermaid_twoGraphs(g:RxGr): String = _toMermaid(g, "flowchart LR \n", "") + _toMermaid(g.getLevel0, " \n",".")
+  
+  /* put the RA in mermaid Code wich  received 3 arguments:
+    g:RxGr -> is the RA
+    sInital:String ->  is the string two begin a mermaid
+    s2:String -> is the string to change name' nodes  for level0 only*/
+  private def _toMermaid(g: RxGr, sInitial: String, s2:String): String = {
     var colors: List[String] = List("gold", "red","blue","gray","orange","pink","green","purple") //miss and black
     // var mermaid = "```mermaid \nflowchart LR \n"
-    var mermaid = "flowchart LR \n"
+    var mermaid = sInitial //"flowchart LR \n"
     
     //Counter to put style in edges
     var numLinhas: Int = 0
@@ -35,9 +44,9 @@ object Show:
         }
         else{
           if g.active(e) then
-            mermaid = mermaid + e.from + "(" + e.from + ") --> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
+            mermaid = mermaid + s2 + e.from + "(" + e.from + ") --> |" + e.act + "|" + s2 + e.to + "(" + e.to + ") \n"
           else
-            mermaid = mermaid + e.from + "(" + e.from + ") -.-> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
+            mermaid = mermaid + s2 + e.from + "(" + e.from + ") -.-> |" + e.act + "|"+ s2 + e.to + "(" + e.to + ") \n"
           mermaid = mermaid + "linkStyle " + numLinhas + " stroke:black"+", stroke-width:2px \n"
           numLinhas = numLinhas + 1
         }
@@ -89,7 +98,7 @@ object Show:
   }
 
   /* function to decide the head arrow (ON, OFF)*/
-  def head(b: Boolean):String ={
+  private def head(b: Boolean):String ={
     if b then ">"
     else "x" 
   }
@@ -97,7 +106,7 @@ object Show:
 
   /* function to get the name in the middle of the edge
   Because ther is some edges wich start in the middle*/
-  def n(edge: Edge): String = {
+  private def n(edge: Edge): String = {
     var m: String = ""
     edge match
       case e: SimpleEdge => m = m + e.from + e.to + e.act
@@ -106,7 +115,7 @@ object Show:
   }
 
   /*function to find the order of edge, it's important to choose the color in Mermaid code */
-  def order(edge: Edge): Int = {
+  private def order(edge: Edge): Int = {
     var n: Int = 1
     edge match
       case e: SimpleEdge => n = 0
@@ -114,7 +123,8 @@ object Show:
     n
   }
 
-  def haveMiddle(e: Edge, g: RxGr):Boolean = 
+  /*function wich give true if the edege needs midle*/ 
+  private def haveMiddle(e: Edge, g: RxGr):Boolean = 
     g.he.contains(e) || g.he.exists{ 
       case (_, s) => 
         var f: Boolean   = false
