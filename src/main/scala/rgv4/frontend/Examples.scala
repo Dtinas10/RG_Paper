@@ -21,7 +21,7 @@ object Examples:
       |  ((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),
       |  ((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),
       |  ((s0,s1,a,0),((s1,s1,b,0),((s0,s1,a,0),((s0,s1,a,0),(s1,s1,b,0),0,Bullet,ON),0,Bullet,OFF),0,Circ,ON),0,Bullet,ON)}
-    """
+    """.stripMargin
 
   val ex1:String = 
     """init = 0; 
@@ -32,7 +32,7 @@ object Examples:
       |ln = {
       |	((0,1,a,0), (1,2,b,0),0,Bullet,ON),
       |  (((0,1,a,0), (1,2,b,0),0,Bullet,ON), (2,0,c,0),0,Bullet,ON)}
-    """
+    """.stripMargin
 
   val gabbayExample:String = 
   """init= Son_of_Tweetie;
@@ -44,7 +44,7 @@ object Examples:
     |ln={
     |  ((Penguin,Bird,-,0),(Bird,Does_Fly,Fly,0),0,Bullet,OFF),
     |  ((Special_Penguin,Penguin,-,0),((Penguin,Bird,-,0),(Bird,Does_Fly,Fly,0),0,Bullet,OFF),0,Bullet,OFF)}
-  """
+  """.stripMargin
 
   val gabbayExample2:String = 
     """init = n1;
@@ -60,7 +60,7 @@ object Examples:
       |  ((c2,n2,-,0),(t1,c1,-,0),0,Bullet,ON),
       |  ((t1,c1,-,0),(t2,c2,-,0),0,Bullet,ON),
       |  ((t2,c2,-,0),(t1,c1,-,0),0,Bullet,ON)}
-    """ 
+    """ .stripMargin
 
   val counter:String = 
     """init = 0;
@@ -69,7 +69,7 @@ object Examples:
       |  ((0,0,act,0),(0,0,act,0),0,Circ,OFF),
       |  ((0,0,act,0),((0,0,act,0),(0,0,act,0),0,Circ,OFF),0, Circ,ON),
       |  ((0,0,act,0),((0,0,act,0),((0,0,act,0),(0,0,act,0),0,Circ,OFF),0, Circ,ON),0,Bullet,ON)}
-    """ 
+    """.stripMargin
   
   val futureModel:String =
     """init = ready;
@@ -83,7 +83,7 @@ object Examples:
       |  sent-encrypt --> ready by -,0};
       |
       |ln = {}
-    """
+    """.stripMargin
 
   val multiActions: String = 
     """init = Insert;
@@ -98,4 +98,4 @@ object Examples:
       |  ((Insert,Cofee,0.5$,0),(Insert,Cofee,0.5$,0),0,Circ,OFF),
       |  ((Insert,Cofee,0.5$,0),(Insert,Chocolate,1$,0),0,Bullet,OFF),
       |  ((Insert,Cofee,0.5$,0),((Insert,Cofee,0.5$,0),(Insert,Cofee,0.5$,0),0,Circ,OFF),0,Bullet,ON)}
-    """
+    """.stripMargin

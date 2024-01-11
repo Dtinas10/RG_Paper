@@ -1,24 +1,24 @@
 [0m[[0m[0minfo[0m] [0m[0mFast optimizing C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\tool\js\gen[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 826627 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 36483 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mLinker: 922595 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 835295 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 40592 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: 923147 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mOptimizer: Batch mode: true[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 147274 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Incremental part: 145560 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizing 9373 methods.[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 1443952 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 1604784 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 107658 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 20779 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mRefiner: 131675 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 3120 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 1033 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 10994 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 16820 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 1058475 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 52551 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: Optimizer part: 1434971 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mOptimizer: 1595038 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 157529 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 16719 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 177281 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Calculate Dependency Info: 4362 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Analyze Modules: 1300 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: Assemble Modules: 10682 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mModule Splitter: 18301 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Generate Classes: 986020 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Write trees: 48701 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 0 -- invalidated: 1372[0m
 [0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: reused: 0 -- invalidated: 4976[0m
-[0m[[0m[0mdebug[0m] [0m[0mEmitter: 1168671 us[0m
-[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 833576 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: 1091787 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasicBackend: Write result: 719007 us[0m
 [0m[[0m[0mdebug[0m] [0m[0mBasicBackend: total top-level trees: 11782; re-computed: 11782[0m
 [0m[[0m[0mdebug[0m] [0m[0mBasicBackend: total modules: 1; re-written: 1[0m
