@@ -47,7 +47,7 @@ object Parser :
 
   // Parsing smaller tokens
   private def alphaDigit: P[Char] =
-    P.charIn('A' to 'Z') | P.charIn('a' to 'z') | P.charIn('0' to '9') | P.charIn('_', '<','>','.','-')
+    P.charIn('A' to 'Z') | P.charIn('a' to 'z') | P.charIn('0' to '9') | P.charIn('_', '<','>','.','-','€','$')
   private def Digit: P[Char] =
     P.charIn('0' to '9') | P.charIn('.')
   def varName: P[String] =

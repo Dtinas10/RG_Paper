@@ -15,14 +15,14 @@ object Show:
   def toMermaid(g: RxGr): String = _toMermaid(g,"flowchart LR \n","")
 
   /** Put the RG in Mermaid Code + RG with level0 only in Mermaid Code*/ 
-  def toMermaid_twoGraphs(g:RxGr): String = _toMermaid(g, "flowchart LR \n", "") + _toMermaid(g.getLevel0, " \n",".")
+  def toMermaid_twoGraphs(g:RxGr): String = _toMermaid(g, "flowchart LR \n", "") + "\n subgraph Level0 only \n direction LR" + _toMermaid(g.getLevel0,"\n",".") + "\n end"
   
   /* put the RA in mermaid Code wich  received 3 arguments:
     g:RxGr -> is the RA
     sInital:String ->  is the string two begin a mermaid
     s2:String -> is the string to change name' nodes  for level0 only*/
   private def _toMermaid(g: RxGr, sInitial: String, s2:String): String = {
-    var colors: List[String] = List("gold", "red","blue","gray","orange","pink","green","purple") //miss and black
+    val colors: List[String] = List("gold", "red","blue","gray","orange","pink","green","purple") //miss and black
     // var mermaid = "```mermaid \nflowchart LR \n"
     var mermaid = sInitial //"flowchart LR \n"
     
@@ -94,6 +94,7 @@ object Show:
     }
 
     mermaid +=  "style " + g.init + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
+    mermaid +=  "style " + s2 + g.init + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
     mermaid
   }
 
@@ -103,9 +104,8 @@ object Show:
     else "x" 
   }
 
-
   /* function to get the name in the middle of the edge
-  Because ther is some edges wich start in the middle*/
+  Because there is some edges wich start in the middle*/
   private def n(edge: Edge): String = {
     var m: String = ""
     edge match

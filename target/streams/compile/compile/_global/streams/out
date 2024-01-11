@@ -1,5 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E171] Type Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala:15:45 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m15 |[0m  [33mdef[0m [36mtoMermaid[0m([36mg[0m: [35mRxGr[0m): [35mString[0m = _toMermaid(g,[31m"flowchart LR \n"[0m)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0mmissing argument for parameter s2 of [33mmethod[0m [35m_toMermaid[0m in [33mobject[0m [35mShow[0m: (g: rgv4.syntax.Program.RxGr, s: String, s2: String): String[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala:18:96 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m  [33mdef[0m [36mtoMermaid_twoGraphs[0m([36mg[0m:[35mRxGr[0m): [35mString[0m = _toMermaid(g, [31m"flowchart LR \n"[0m, [31m""[0m) + [31m"\nsubgraph"[0m _toMermaid(g.getLevel0,[31m" \n"[0m,[31m"."[0m) +[31m"\n end"[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                              value _toMermaid is not a member of String[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
