@@ -1,5 +1,5 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala:18:96 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m18 |[0m  [33mdef[0m [36mtoMermaid_twoGraphs[0m([36mg[0m:[35mRxGr[0m): [35mString[0m = _toMermaid(g, [31m"flowchart LR \n"[0m, [31m""[0m) + [31m"\nsubgraph"[0m _toMermaid(g.getLevel0,[31m" \n"[0m,[31m"."[0m) +[31m"\n end"[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                              value _toMermaid is not a member of String[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E119] Type Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala:71:36 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m71 |[0m    [33mif[0m !rxGr.active(se) [33mthen[0m [33mreturn[0m Error[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                    ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                                 Java defined [33mclass[0m [35mError[0m is not a value[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m

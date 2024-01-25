@@ -15,7 +15,10 @@ object Show:
   def toMermaid(g: RxGr): String = _toMermaid(g,"flowchart LR \n","")
 
   /** Put the RG in Mermaid Code + RG with level0 only in Mermaid Code*/ 
-  def toMermaid_twoGraphs(g:RxGr): String = _toMermaid(g, "flowchart LR \n", "") + "\n subgraph Level0 only \n direction LR" + _toMermaid(g.getLevel0,"\n",".") + "\n end"
+  def toMermaid_twoGraphs(g:RxGr): String = 
+    _toMermaid(g, "flowchart LR \n subgraph Global View  \n direction LR \n", "")  
+    + "\n end \n subgraph Local View \n direction RL \n" 
+    + _toMermaid(g.getLevel0,"\n",".") + "\n end"
   
   /* put the RA in mermaid Code wich  received 3 arguments:
     g:RxGr -> is the RA
