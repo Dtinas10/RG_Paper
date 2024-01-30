@@ -162,3 +162,13 @@ object Examples:
     |  ((s0,s1,a,0),(s1,s2,b,0),0,Bullet,OFF)}
     """.stripMargin
     
+// init = 0; 
+// l0={ 
+// 	0 --> 1 by a,0,
+//   1 --> 2 by b,0,
+//   2 -.-> 0 by c,0};
+// ln = {
+// 	((0,1,a,0), (1,2,b,0),0,Bullet,ON),
+//   (((0,1,a,0), (1,2,b,0),0,Bullet,ON), (2,0,c,0),0,Bullet,ON),
+//   ((((0,1,a,0), (1,2,b,0),0,Bullet,ON), (2,0,c,0),0,Bullet,ON),(1,2,b,0),0,Bullet,OFF)}
+    

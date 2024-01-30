@@ -5775,3 +5775,218 @@ jan 25, 2024 12:56:56 DA MANHÃ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCa
 WARNING: Unmatched cancel notification for request id 1551
 2024.01.25 00:56:59 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
 2024.01.25 00:57:34 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.25 01:04:55 INFO  Shutting down server
+2024.01.25 01:04:55 INFO  shutting down Metals
+2024.01.25 01:04:55 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.25 01:04:55 INFO  Exiting server
+2024.01.26 14:12:44 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.26 14:12:49 WARN  Build server is not auto-connectable.
+2024.01.26 14:12:49 INFO  skipping build import with status 'Dismissed'
+2024.01.26 14:12:51 WARN  Build server is not auto-connectable.
+2024.01.26 14:12:51 WARN  Build server is not auto-connectable.
+2024.01.26 14:12:51 WARN  Build server is not auto-connectable.
+2024.01.26 14:12:52 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Parser.scala
+2024.01.26 14:12:52 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+2024.01.26 14:13:11 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.26 14:13:25 INFO  time: code lens generation in 33s
+2024.01.26 15:03:43 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+jan 26, 2024 3:03:44 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 10
+2024.01.26 15:21:31 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.26 15:35:15 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+2024.01.26 16:28:13 INFO  Shutting down server
+2024.01.26 16:28:13 INFO  shutting down Metals
+2024.01.26 16:28:13 INFO  Exiting server
+2024.01.27 00:07:44 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.27 00:07:48 WARN  Build server is not auto-connectable.
+2024.01.27 00:07:48 INFO  skipping build import with status 'Dismissed'
+2024.01.27 00:07:48 WARN  Build server is not auto-connectable.
+2024.01.27 00:07:49 WARN  Build server is not auto-connectable.
+2024.01.27 00:07:49 WARN  Build server is not auto-connectable.
+2024.01.27 00:07:49 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+2024.01.27 00:07:49 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.27 00:08:01 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.27 00:08:01 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.27 00:08:08 INFO  time: code lens generation in 18s
+jan 27, 2024 2:01:17 DA MANHÃ org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 13
+2024.01.27 02:01:20 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.27 03:14:19 INFO  Shutting down server
+2024.01.27 03:14:19 INFO  shutting down Metals
+2024.01.27 03:14:19 INFO  Exiting server
+2024.01.27 19:31:53 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.27 19:31:56 WARN  Build server is not auto-connectable.
+2024.01.27 19:31:56 INFO  skipping build import with status 'Dismissed'
+2024.01.27 19:31:56 WARN  Build server is not auto-connectable.
+2024.01.27 19:31:57 WARN  Build server is not auto-connectable.
+2024.01.27 19:31:57 WARN  Build server is not auto-connectable.
+2024.01.27 19:31:58 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+2024.01.27 19:31:58 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+jan 27, 2024 7:31:59 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2024.01.27 19:32:09 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.27 19:32:14 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.27 19:32:14 INFO  time: code lens generation in 15s
+2024.01.27 19:32:16 INFO  time: code lens generation in 1.55s
+2024.01.27 19:33:20 INFO  Shutting down server
+2024.01.27 19:33:20 INFO  shutting down Metals
+2024.01.27 19:33:20 INFO  Exiting server
+2024.01.28 22:33:28 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.28 22:33:30 WARN  Build server is not auto-connectable.
+2024.01.28 22:33:30 INFO  skipping build import with status 'Dismissed'
+2024.01.28 22:33:31 WARN  Build server is not auto-connectable.
+2024.01.28 22:33:31 WARN  Build server is not auto-connectable.
+2024.01.28 22:33:31 WARN  Build server is not auto-connectable.
+2024.01.28 22:33:31 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:33:38 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.28 22:33:41 INFO  time: code lens generation in 10s
+2024.01.28 22:38:35 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:38:54 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:38:58 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+jan 28, 2024 10:39:22 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 47
+2024.01.28 22:40:01 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+2024.01.28 22:40:14 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:41:00 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Site.scala
+2024.01.28 22:41:27 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Site.scala
+2024.01.28 22:41:56 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:42:30 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Site.scala
+2024.01.28 22:42:37 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+2024.01.28 22:42:54 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:43:01 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+2024.01.28 22:44:39 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+jan 28, 2024 10:44:39 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 331
+jan 28, 2024 10:44:46 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 339
+2024.01.28 22:45:19 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Parser.scala
+2024.01.28 22:47:56 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+scala.meta.tokenizers.TokenizeException: <input>:43: error: Non-zero integral values may not have a leading zero.
+            mermaid = mermaid + e.from + id +00000000"(" + e.from + ") -.-"+  n(e) + "( ) -.-> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
+                                             ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:856)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchZero$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:332)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.28 22:47:57 ERROR Failed to tokenize input for semantic tokens for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+scala.meta.tokenizers.TokenizeException: <input>:43: error: Non-zero integral values may not have a leading zero.
+            mermaid = mermaid + e.from + id +00000"(" + e.from + ") -.-"+  n(e) + "( ) -.-> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
+                                             ^
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:23)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter.syntaxError$(Reporter.scala:25)
+	at scala.meta.internal.tokenizers.Reporter$$anon$1.syntaxError(Reporter.scala:33)
+	at scala.meta.internal.tokenizers.LegacyScanner.restOfUncertainToken$1(LegacyScanner.scala:856)
+	at scala.meta.internal.tokenizers.LegacyScanner.getNumber(LegacyScanner.scala:872)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchZero$1(LegacyScanner.scala:330)
+	at scala.meta.internal.tokenizers.LegacyScanner.fetchToken(LegacyScanner.scala:332)
+	at scala.meta.internal.tokenizers.LegacyScanner.nextToken(LegacyScanner.scala:211)
+	at scala.meta.internal.tokenizers.LegacyScanner.foreach(LegacyScanner.scala:1011)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.uncachedTokenize(ScalametaTokenizer.scala:24)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.$anonfun$tokenize$1(ScalametaTokenizer.scala:17)
+	at scala.collection.concurrent.TrieMap.getOrElseUpdate(TrieMap.scala:962)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer.tokenize(ScalametaTokenizer.scala:17)
+	at scala.meta.internal.tokenizers.ScalametaTokenizer$$anon$2.apply(ScalametaTokenizer.scala:332)
+	at scala.meta.tokenizers.Api$XtensionTokenizeDialectInput.tokenize(Api.scala:25)
+	at scala.meta.tokenizers.Api$XtensionTokenizeInputLike.tokenize(Api.scala:14)
+	at scala.meta.internal.metals.SemanticTokensProvider$.getTokens(SemanticTokensProvider.scala:28)
+	at scala.meta.internal.metals.SemanticTokensProvider$.provide(SemanticTokensProvider.scala:89)
+	at scala.meta.internal.metals.Compilers.$anonfun$semanticTokens$3(Compilers.scala:541)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+jan 28, 2024 10:49:13 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 757
+2024.01.28 22:49:33 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:50:34 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:51:19 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:52:07 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:52:27 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:52:54 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:53:24 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:54:51 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.28 22:56:33 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:57:37 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:57:46 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:58:26 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 22:59:24 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.28 23:21:08 INFO  Shutting down server
+2024.01.28 23:21:08 INFO  shutting down Metals
+2024.01.28 23:21:08 INFO  Exiting server
+2024.01.28 23:21:08 ERROR Unexpected error initializing server: 
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Request window/showMessageRequest failed with message: Canceled
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:209)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:193)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+
+2024.01.29 11:28:42 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.29 11:28:44 WARN  Build server is not auto-connectable.
+2024.01.29 11:28:45 INFO  skipping build import with status 'Dismissed'
+2024.01.29 11:28:44 WARN  Build server is not auto-connectable.
+2024.01.29 11:28:46 WARN  Build server is not auto-connectable.
+2024.01.29 11:28:46 WARN  Build server is not auto-connectable.
+2024.01.29 11:28:46 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.29 11:29:00 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.29 11:29:00 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.29 11:29:06 INFO  time: code lens generation in 20s
+2024.01.29 12:50:35 INFO  Shutting down server
+2024.01.29 12:50:35 INFO  shutting down Metals
+2024.01.29 12:50:35 INFO  Exiting server
+2024.01.30 14:59:07 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.30 14:59:09 WARN  Build server is not auto-connectable.
+2024.01.30 14:59:09 INFO  skipping build import with status 'Dismissed'
+2024.01.30 14:59:10 WARN  Build server is not auto-connectable.
+2024.01.30 14:59:10 WARN  Build server is not auto-connectable.
+2024.01.30 14:59:10 WARN  Build server is not auto-connectable.
+2024.01.30 14:59:10 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.30 14:59:10 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+jan 30, 2024 2:59:31 DA TARDE org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+jan 30, 2024 2:59:31 DA TARDE org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace

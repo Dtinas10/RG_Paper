@@ -1,0 +1,6 @@
+[0m[[0m[31merror[0m] [0m[0m[31m-- Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Site.scala:268:19 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m268 |[0m          [33mval[0m [36mc2[0m = [33mnew[0m [35mConfigurator[A][0m {[0m
+[0m[[0m[31merror[0m] [0m[0m    |                   [31m^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m    |object creation impossible, since val name2: String in [33mtrait[0m [35mConfigurator[0m in [33mpackage[0m [35mcaos.frontend[0m is not defined [0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

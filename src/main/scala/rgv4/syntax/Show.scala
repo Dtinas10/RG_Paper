@@ -12,19 +12,20 @@ object Show:
 
 
   /** Put the reactive graph RxGr in Mermaid Code*/
-  def toMermaid(g: RxGr): String = _toMermaid(g,"flowchart LR \n","")
+  def toMermaid(g: RxGr,id:String): String = _toMermaid(g,"flowchart LR \n","",id)
 
   /** Put the RG in Mermaid Code + RG with level0 only in Mermaid Code*/ 
-  def toMermaid_twoGraphs(g:RxGr): String = 
-    _toMermaid(g, "flowchart LR \n subgraph Global View  \n direction LR \n", "")  
-    + "\n end \n subgraph Local View \n direction RL \n" 
-    + _toMermaid(g.getLevel0,"\n",".") + "\n end"
+  def toMermaid_twoGraphs(g:RxGr,id:String): String = 
+    _toMermaid(g, "flowchart LR \n subgraph Global View  \n direction LR \n", "",id)  
+    + "\n end \n subgraph Local View \n direction LR \n" 
+    + _toMermaid(g.getLevel0,"\n",".",id) + "\n end"
   
   /* put the RA in mermaid Code wich  received 3 arguments:
     g:RxGr -> is the RA
     sInital:String ->  is the string two begin a mermaid
-    s2:String -> is the string to change name' nodes  for level0 only*/
-  private def _toMermaid(g: RxGr, sInitial: String, s2:String): String = {
+    s2:String -> is the string to change name' nodes  for level0 only
+    id:String -> is the id to identify nodes in widget*/
+  private def _toMermaid(g: RxGr, sInitial: String, s2:String, id:String): String = {
     val colors: List[String] = List("gold", "red","blue","gray","orange","pink","green","purple") //miss and black
     // var mermaid = "```mermaid \nflowchart LR \n"
     var mermaid = sInitial //"flowchart LR \n"
@@ -37,19 +38,19 @@ object Show:
       for (e <- edge){
         if haveMiddle(e,g) then{
           if g.active(e) then
-            mermaid = mermaid + e.from + "(" + e.from + ") ---"+  n(e) + "( ) --> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
+            mermaid = mermaid + e.from + id + "(" + e.from + ") ---"+  n(e) + id + "( ) --> |" + e.act + "|"+ e.to + id + "(" + e.to + ") \n"
           else
-            mermaid = mermaid + e.from + "(" + e.from + ") -.-"+  n(e) + "( ) -.-> |" + e.act + "|"+ e.to + "(" + e.to + ") \n"
-          mermaid = mermaid + "style " + n(e) + " width:0px \n"
+            mermaid = mermaid + e.from + id + "(" + e.from + ") -.-"+  n(e) + id + "( ) -.-> |" + e.act + "|"+ e.to + id + "(" + e.to + ") \n"
+          mermaid = mermaid + "style " + n(e) + id + " width:0px \n"
           mermaid = mermaid + "linkStyle " + numLinhas +" stroke:black"+", stroke-width:2px \n"
           mermaid = mermaid + "linkStyle " + (numLinhas + 1) +" stroke:black"+", stroke-width:2px \n"
           numLinhas = numLinhas + 2
         }
         else{
           if g.active(e) then
-            mermaid = mermaid + s2 + e.from + "(" + e.from + ") --> |" + e.act + "|" + s2 + e.to + "(" + e.to + ") \n"
+            mermaid = mermaid + s2 + e.from + id +"(" + e.from + ") --> |" + e.act + "|" + s2 + e.to + id +"(" + e.to + ") \n"
           else
-            mermaid = mermaid + s2 + e.from + "(" + e.from + ") -.-> |" + e.act + "|"+ s2 + e.to + "(" + e.to + ") \n"
+            mermaid = mermaid + s2 + e.from + id + "(" + e.from + ") -.-> |" + e.act + "|"+ s2 + e.to + id +"(" + e.to + ") \n"
           mermaid = mermaid + "linkStyle " + numLinhas + " stroke:black"+", stroke-width:2px \n"
           numLinhas = numLinhas + 1
         }
@@ -64,11 +65,11 @@ object Show:
           case e: HyperEdge =>
             if haveMiddle(e,g) then{
               if g.active(e) then
-                mermaid = mermaid + n(e.from) + "( ) ---" + n(e) + "( ) --"+ head(e.activate) + n(e.to) + "( ) \n"
+                mermaid = mermaid + n(e.from) + id +"( ) ---" + n(e) + id +"( ) --"+ head(e.activate) + n(e.to) + id +"( ) \n"
               else
-                mermaid = mermaid + n(e.from) + "( ) -.-" + n(e) + "( ) -.-"+ head(e.activate)+ n(e.to) + "( ) \n"
+                mermaid = mermaid + n(e.from) + id +"( ) -.-" + n(e) + id +"( ) -.-"+ head(e.activate)+ n(e.to) + id +"( ) \n"
 
-              mermaid = mermaid + "style " + n(e) + " width:0px \n"
+              mermaid = mermaid + "style " + n(e) + id +" width:0px \n"
               if (order(e.from) < order(e.to)) then{
                 mermaid = mermaid + "linkStyle " + numLinhas +" stroke:dark"+ colors(order(e))+", stroke-width:2px \n"
                 mermaid = mermaid + "linkStyle " + (numLinhas + 1) +" stroke:dark"+ colors(order(e))+", stroke-width:2px \n"
@@ -81,9 +82,9 @@ object Show:
             }else{
 
               if g.active(e) then
-                mermaid = mermaid + n(e.from) + "( ) --"+ head(e.activate) + n(e.to) + "( ) \n"
+                mermaid = mermaid + n(e.from) + id +"( ) --"+ head(e.activate) + n(e.to) + id +"( ) \n"
               else
-                mermaid = mermaid + n(e.from) + "( ) -.-"+ head(e.activate)+ n(e.to) + "( ) \n"
+                mermaid = mermaid + n(e.from) + id +"( ) -.-"+ head(e.activate)+ n(e.to) + id +"( ) \n"
 
               if (order(e.from) < order(e.to)) then{
                 mermaid = mermaid + "linkStyle " + numLinhas +" stroke:"+ colors(order(e))+", stroke-width:3px \n"
@@ -96,8 +97,8 @@ object Show:
       }
     }
 
-    mermaid +=  "style " + g.init + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
-    mermaid +=  "style " + s2 + g.init + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
+    mermaid +=  "style " + g.init + id + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
+    mermaid +=  "style " + s2 + g.init + id + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
     mermaid
   }
 
