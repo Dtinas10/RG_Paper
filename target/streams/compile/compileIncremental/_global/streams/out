@@ -2,34 +2,34 @@
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
 [0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 27 products, 7 sources, 5 libraries[0m
 [0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/rgv4/frontend/Examples.scala, ${BASE}/src/main/scala/rgv4/syntax/Program.scala, ${BASE}/src/main/scala/rgv4/syntax/Show.scala, ${BASE}/src/main/scala/rgv4/syntax/Parser.scala, ${BASE}/src/main/scala/rgv4/frontend/Main.scala, ${BASE}/src/main/scala/rgv4/backend/Semantics.scala, ${BASE}/src/main/scala/rgv4/frontend/CaosConfig.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/rgv4/syntax/Show.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/rgv4/frontend/CaosConfig.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0m[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/rgv4/syntax/Show.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/rgv4/frontend/CaosConfig.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(rgv4.syntax.Show)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(rgv4.frontend.CaosConfig)[0m
 [0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
 [0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(rgv4.syntax.Show)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/rgv4/syntax/Show.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: rgv4.syntax.Show[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(rgv4.frontend.CaosConfig)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/rgv4/frontend/CaosConfig.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: rgv4.frontend.CaosConfig[0m
 [0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
 [0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Users\DavidTinoco\Desktop\RG\RG_Paper\target\scala-3.3.1\classes ...[0m
 [0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-sbt-bridge\3.3.1\scala3-sbt-bridge-3.3.1.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 52dec557 for Scala Compiler version 3.3.1[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 75b44449 for Scala Compiler version 3.3.1[0m
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-scalajs[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.3.1\scala3-library_3-3.3.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.10\scala-library-2.13.10.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	C:\Users\DavidTinoco\Desktop\RG\RG_Paper\target\scala-3.3.1\classes;C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\target\scala-3.1.1\classes;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_sjs1_3\3.3.1\scala3-library_sjs1_3-3.3.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-library_2.13\1.14.0\scalajs-library_2.13-1.14.0.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-parse_sjs1_3\0.3.4\cats-parse_sjs1_3-0.3.4.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\be\doeraene\scalajs-jquery_sjs1_2.13\1.0.0\scalajs-jquery_sjs1_2.13-1.0.0.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-dom_sjs1_2.13\1.2.0\scalajs-dom_sjs1_2.13-1.2.0.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\scalatags_sjs1_2.13\0.9.1\scalatags_sjs1_2.13-0.9.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-js\scalajs-javalib\1.14.0\scalajs-javalib-1.14.0.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-core_sjs1_3\2.6.1\cats-core_sjs1_3-2.6.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\sourcecode_sjs1_2.13\0.2.1\sourcecode_sjs1_2.13-0.2.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\lihaoyi\geny_sjs1_2.13\0.6.0\geny_sjs1_2.13-0.6.0.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-kernel_sjs1_3\2.6.1\cats-kernel_sjs1_3-2.6.1.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\simulacrum-scalafix-annotations_3\0.5.4\simulacrum-scalafix-annotations_3-0.5.4.jar;C:\Users\DavidTinoco\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.0.0\scala3-library_3-3.0.0.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 1.0027293 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.5546366 s[0m
 [0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
 [0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
 [0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m

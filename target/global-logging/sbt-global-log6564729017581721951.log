@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(fastLinkJS, Some(d4bb3ea9-f5fb-4c2d-b6ec-85a2fb3ca86f), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / fastLinkJS[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\target\scala-3.1.1\classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to C:\Users\DavidTinoco\Desktop\RG\RG_Paper\target\scala-3.3.1\classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\tool\js\gen[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 148 -- trees read: 1591[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 48 s, completed 31/01/2024, 12:36:46[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -23,9 +23,9 @@ object CaosConfig extends Configurator[RxGr]:
     "Gabbay Example" -> Examples.gabbayExample -> "Figure 7.4 in Dov M Gabbay, Cognitive Technologies Reactive Kripke Semantics",
     // "Gabbay Example2" -> Example_GabbayExample2-> "Figure 7.9 of Dov M Gabbay, Cognitive Technologies Reactive Kripke Semantics",
     "Counter" ->  Examples.counter-> "Run 3 times only the action *act*",
-    "Future Model"->  Examples.futureModel -> "Fig 1 in Maxime Cordy et al. Model Checking Adaptive Software with Featured Transition Systems",
+    "Feature Model"->  Examples.featureModel -> "Fig 1 in Maxime Cordy et al. Model Checking Adaptive Software with Featured Transition Systems",
     "Vending Machine"->  Examples.vendingMachine -> "We have 1$ only to spend in the vending machine and we need to decide the best option between cofee, chocolate and apple.",
-    "Vending Machine 2"->  Examples.vendingMachine2 -> "We have 1$ only to spend in the vending machine and we need to decide the best option between cofee, chocolate and apple.",
+    //"Vending Machine 2"->  Examples.vendingMachine2 -> "We have 1$ only to spend in the vending machine and we need to decide the best option between cofee, chocolate and apple.",
     "Inconsistency" -> Examples.inconsistency -> "Example of Reactive Graph with an inconsistency.",
     "Example" -> Examples.exampleOfReport -> "Example of Report",
     "Ex1" -> Examples.ex1,
@@ -41,21 +41,22 @@ object CaosConfig extends Configurator[RxGr]:
     "Run semantics" -> steps(e=>e, Semantics, x => Show.toMermaid(x,"RS"), _.toString, Mermaid),
     "Run semantics with local structure" -> steps(e=>e, Semantics, x => Show.toMermaid_twoGraphs(x,"RSLS"), _.toString, Mermaid),
     "Build LTS" -> lts(x=>x, Semantics, x=>x.init, _.toString),
+    // "Build LTS" -> lts(x=>x, Semantics, x=>x.init, _.toString),
     // "Check" -> check(x=>Seq(x.toString)),
     // "Build LTS2" -> lts(x=>x, Semantics, x=>x.active.toString, _.toString),
     //  "Build LTS" -> lts((e:System)=>e, Semantics, Show.justTerm, _.toString).expand,
     //  "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>Show(x.main), _.toString),
     // "Find strong bisimulation (given a program \"A ~ B\")" ->
-      // compareStrongBisim(Semantics, Semantics,
-        // (e: System) => System(e.defs, e.main, None),
-        // (e: System) => System(e.defs, e.toCompare.getOrElse(Program.Term.End), None),
-        // Show.justTerm, Show.justTerm, _.toString),
+    //   compareStrongBisim(Semantics, Semantics,
+    //     (e: RxGr) => e,
+    //     (e: RxGr) => e.getLevel0,
+    //     x => x.toString2, x => x.toString2, _.toString),
   )
 
   //// Documentation below
 
   override val footer: String =
-    """Simple animator of Reactive Graphs, meant to exemplify the
+    """Simple animator of Multi Action Reactive Graphs, meant to exemplify the
       | CAOS libraries, used to generate this website. Source code available online:
       | <a target="_blank" href="https://github.com/arcalab/CAOS">
       | https://github.com/arcalab/CAOS</a> (CAOS).""".stripMargin
@@ -65,16 +66,24 @@ object CaosConfig extends Configurator[RxGr]:
 
   override val documentation: Documentation = List(
     languageName -> "More information on the syntax of Reactive Graph" ->
-    """A program <code>RG</code> in Reactive Graph is given by the following grammar:
-       <pre>
-       |  init = Initial State
-       |  l0 = {
-       |      State from  --> State to by action, weigth, 
-       |      }
-       |  ln = {
-       |      (SE from, HE to, weigth, active, function),
-       |      }
-       </pre>
+    """|A program <code>RG</code> in Reactive Graph is given by the following grammar:
+       |<pre>
+       |init = Initial State;
+       |l0 = {
+       |    State from  --> State to by action, weigth, 
+       |    };
+       |ln = {
+       |    (HE from, HE to, weigth, active, function),
+       |    }
+       |
+       |</pre>
+       |
+       |</p>"init" is the current state; </p>
+       |</p>"l0" is the level 0 edges, use --> if edge is enable, and -.-> if edge are disable; </p>
+       |</p>"ln" is the hyper edges, this type can start and ends in hyper edge (HE) or level 0 edge (E). Each edge is defined by recursion, then, the space HE from and HE to, is another edge in the same form, i.e. (HE From, HE to, weight, action, function); </p>
+       |</p>"action" is a string without spaces and is acepted any letter in lower or upper case, any digit and these characters '_', '<','>','.','-','€' and '$'; </p>
+       |</p>"weight" is a number, can be float or not; </p>
+       |</p>"funtion" can be 'ON' or 'OFF', if the edge enable or disable other edges, respectively.</p>
        """.stripMargin,
     "Build LTS" -> "More information on the operational rules used here" -> sosRules,
     "Build LTS (explore)" -> "More information on the operational rules used here" -> sosRules,

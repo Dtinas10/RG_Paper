@@ -37,7 +37,7 @@ object Program:
                   init: State,                  // initial state
                   active: Set[Edge]):           // set of active edges
 
-    // override def toString: String = s"$init${active.map(e=>s"\n${e.pretty}").mkString}"
+    def toString2: String = s"$init${active.map(e=>s"\n${e.pretty}").mkString}"
     override def toString: String = s"$init${""}" 
     /** Auxiliary function to collect all states */
     def states:Set[State] = se.keySet + init

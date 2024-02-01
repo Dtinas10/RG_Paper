@@ -71,7 +71,7 @@ object Examples:
       |  ((0,0,act,0),((0,0,act,0),((0,0,act,0),(0,0,act,0),0,Circ,OFF),0, Circ,ON),0,Bullet,ON)}
     """.stripMargin
   
-  val futureModel:String =
+  val featureModel:String =
     """init = setup;
       |l0 = {
       |  setup --> setup by safe,0,   

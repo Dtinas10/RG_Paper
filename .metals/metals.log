@@ -5990,3 +5990,80 @@ jan 30, 2024 2:59:31 DA TARDE org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint
 INFO: Unsupported notification method: $/setTrace
 jan 30, 2024 2:59:31 DA TARDE org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2024.01.30 15:36:05 INFO  Shutting down server
+2024.01.30 15:36:05 INFO  shutting down Metals
+2024.01.31 10:59:49 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.01.31 10:59:50 WARN  Build server is not auto-connectable.
+2024.01.31 10:59:50 INFO  skipping build import with status 'Dismissed'
+2024.01.31 10:59:56 WARN  Build server is not auto-connectable.
+2024.01.31 10:59:58 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.31 10:59:58 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.01.31 11:00:00 WARN  Build server is not auto-connectable.
+2024.01.31 11:00:00 WARN  Build server is not auto-connectable.
+2024.01.31 11:00:00 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.31 11:00:00 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.01.31 11:00:03 INFO  time: code lens generation in 2.83s
+2024.01.31 12:24:41 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+jan 31, 2024 12:24:42 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 246
+2024.01.31 12:24:44 INFO  time: code lens generation in 1.41s
+2024.01.31 12:34:35 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.31 12:34:42 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.31 12:34:51 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.01.31 12:35:13 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.01.31 12:37:21 INFO  Shutting down server
+2024.01.31 12:37:21 INFO  shutting down Metals
+2024.01.31 12:37:21 INFO  Exiting server
+2024.02.01 18:29:04 INFO  Started: Metals version 1.2.0 in folders 'C:\Users\DavidTinoco\Desktop\MMA\original\original, C:\Users\DavidTinoco\Desktop\MMA\BI\Mermaid, C:\Users\DavidTinoco\Desktop\MMA\rgv3, C:\Users\DavidTinoco\Desktop\MMA\RxGr, C:\Users\DavidTinoco\Desktop\RG\RG_Paper' for client Visual Studio Code 1.85.2.
+2024.02.01 18:29:06 WARN  Build server is not auto-connectable.
+2024.02.01 18:29:06 INFO  skipping build import with status 'Dismissed'
+2024.02.01 18:29:07 WARN  Build server is not auto-connectable.
+2024.02.01 18:29:07 WARN  Build server is not auto-connectable.
+2024.02.01 18:29:07 WARN  Build server is not auto-connectable.
+2024.02.01 18:29:06 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:29:17 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.01 18:29:17 INFO  no build target found for C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala. Using presentation compiler with project's scala-library version: 3.3.1
+2024.02.01 18:29:22 INFO  time: code lens generation in 15s
+fev 01, 2024 6:32:20 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 399
+fev 01, 2024 6:32:50 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 435
+2024.02.01 18:35:24 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Parser.scala
+2024.02.01 18:37:17 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Configurator.scala
+fev 01, 2024 6:38:45 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1212
+2024.02.01 18:40:44 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:41:47 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:42:14 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:42:38 WARN  no build target for: C:\Users\DavidTinoco\Desktop\MMA\original\original\src\main\scala\original\frontend\CaosConfig.scala
+2024.02.01 18:43:22 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:43:49 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:45:25 WARN  no build target for: C:\Users\DavidTinoco\Desktop\MMA\original\original\src\main\scala\original\frontend\CaosConfig.scala
+2024.02.01 18:48:33 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:49:00 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:49:07 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:50:11 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:50:42 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:52:12 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Documentation.scala
+2024.02.01 18:52:28 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\lib\caos\src\main\scala\caos\frontend\Site.scala
+fev 01, 2024 6:52:29 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1745
+2024.02.01 18:53:14 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Show.scala
+2024.02.01 18:53:17 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\Examples.scala
+2024.02.01 18:54:01 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 18:55:41 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 21:52:46 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+2024.02.01 21:53:58 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 21:54:33 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 21:54:50 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+fev 01, 2024 9:55:47 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2546
+2024.02.01 21:55:53 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala
+fev 01, 2024 9:56:02 DA TARDE org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2574
+2024.02.01 21:56:15 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 21:59:03 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 22:00:33 WARN  no build target for: C:\Users\DavidTinoco\Desktop\MMA\original\original\src\main\scala\original\syntax\Parser.scala
+2024.02.01 22:01:15 WARN  no build target for: C:\Users\DavidTinoco\Desktop\MMA\original\original\src\main\scala\original\syntax\Program.scala
+2024.02.01 22:01:53 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
+2024.02.01 22:02:38 WARN  no build target for: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala
