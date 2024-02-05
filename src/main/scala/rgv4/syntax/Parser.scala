@@ -77,7 +77,7 @@ object Parser :
   private def circ2:   P[Boolean] = P.string("-.->").map(x => false)
   private def edgeactive2: P[Boolean] = bullet2 | circ2
   
-
+  // Verison with parantesis
   private def simpleEdge: P[(SimpleEdge,Boolean)] = 
     (((((P.char('(') *> 
        state.surroundedBy(sps) <* P.string(",")) ~
@@ -88,6 +88,7 @@ object Parser :
        .map { case (((((from,to),action),w),active)) => 
         (SimpleEdge(from, to, action, w),active)}
 
+  // verison a --> b by a,0,      
   private def simpleEdge2: P[(SimpleEdge,Boolean)] = 
     (((( state.surroundedBy(sps) ~
        edgeactive2.surroundedBy(sps)) ~
@@ -97,6 +98,15 @@ object Parser :
        .map { case (((((from,active),to),action),w)) => 
         (SimpleEdge(from, to, action, w),active)}
   
+  //verison without weight      
+  private def simpleEdge_withoutWeight: P[(SimpleEdge,Boolean)] = 
+    ((( state.surroundedBy(sps) ~
+       edgeactive2.surroundedBy(sps)) ~
+       state.surroundedBy(sps) <* P.string("by")) ~
+       edgeaction.surroundedBy(sps))
+       .map { case ((((from,active),to),action)) => 
+        (SimpleEdge(from, to, action, 0),active)}
+  
   private def simpleEdgeN: P[(SimpleEdge,Boolean)] = 
     (((((P.char('(') *> 
        state.surroundedBy(sps) <* P.string(",")) ~
@@ -105,7 +115,18 @@ object Parser :
        edgeweight.surroundedBy(sps) <* P.char(')')))
        .map { case (((from,to),action),w) => (SimpleEdge(from, to, action, w), true)}
 
-  private def edge: P[(Edge,Boolean)] =  P.defer(simpleEdgeN.backtrack | hyperEdge) 
+  //version without weight     
+  private def simpleEdgeN_withoutWeight: P[(SimpleEdge,Boolean)] = 
+    (((P.char('(') *> 
+       state.surroundedBy(sps) <* P.string(",")) ~
+       state.surroundedBy(sps) <* P.string(",")) ~
+       edgeaction.surroundedBy(sps) <* P.char(')'))
+       .map { case ((from,to),action) => (SimpleEdge(from, to, action, 0), true)}
+
+  private def edge: P[(Edge,Boolean)] =  P.defer(simpleEdgeN.backtrack | hyperEdge)
+  //version without weight 
+  private def edge_withoutWeight: P[(Edge,Boolean)] =  P.defer(simpleEdgeN_withoutWeight.backtrack | hyperEdge_withoutWeight) 
+
   private def hyperEdge: P[(HyperEdge,Boolean)] = 
     (((((P.char('(') *> edge.surroundedBy(sps) <* P.string(",")) ~
       (edge.surroundedBy(sps)) <* P.char(',')) ~
@@ -116,9 +137,19 @@ object Parser :
         (HyperEdge(from._1, to._1, w, function),active)
   }
 
+  //version without weight
+  private def hyperEdge_withoutWeight: P[(HyperEdge,Boolean)] = 
+    ((((P.char('(') *> edge_withoutWeight.surroundedBy(sps) <* P.string(",")) ~
+      (edge_withoutWeight.surroundedBy(sps)) <* P.char(',')) ~
+      edgeactive.surroundedBy(sps) <* P.char(',')) ~
+      edgefunction.surroundedBy(sps) <* P.char(')'))
+      .map{ case ((((from,to),active),function)) => 
+        (HyperEdge(from._1, to._1, 0, function),active)
+  }
+
   private def level0: P[(Map[State, Set[SimpleEdge]], Set[Edge])] =
     (((P.string("l0") *> P.char('=').surroundedBy(sps)) *> P.char('{').surroundedBy(sps)) *>
-      (simpleEdge2.repSep(char(',').surroundedBy(sps))).surroundedBy(sps) <* P.char('}').surroundedBy(sps))
+      (simpleEdge_withoutWeight.repSep(char(',').surroundedBy(sps))).surroundedBy(sps) <* P.char('}').surroundedBy(sps))
       .map(edges => {
         val edgesMap = edges.collect { case (edge, _) => edge.from -> edge }.groupBy(_._1).view.mapValues(_.map(_._2).toSet).toMap
         val activeEdgesSet:Set[Edge] = edges.collect { case (edge, true) => edge }.toSet
@@ -127,7 +158,7 @@ object Parser :
 
   private def levelN: P[(Map[Edge,Set[Edge]],Set[Edge])] = 
       (((P.string("ln") *> P.char('=').surroundedBy(sps)) *> P.char('{').surroundedBy(sps)) *> 
-      (hyperEdge.repSep0(char(',').surroundedBy(sps))).surroundedBy(sps) <* P.char('}').surroundedBy(sps))
+      (hyperEdge_withoutWeight.repSep0(char(',').surroundedBy(sps))).surroundedBy(sps) <* P.char('}').surroundedBy(sps))
       .map(edges => {
         val edgesMap:Map[Edge,Set[Edge]] = edges.collect { case (edge, _) => edge.from -> edge }.groupBy(_._1).view.mapValues(_.map(_._2).toSet).toMap
         val activeEdgesSet:Set[Edge] = edges.collect { case (edge, true) => edge }.toSet
