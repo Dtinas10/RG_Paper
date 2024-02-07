@@ -36,7 +36,8 @@ object CaosConfig extends Configurator[System]:
   /** Description of the widgets that appear in the dashboard. */
   val widgets = List(
     "View pretty data" -> view[System](x => Show.toMermaid(x.main,"VPD"), Code("haskell")).moveTo(1),
-    "Dead Locks" -> view[System](x => Program.find(x.main,Set(x.main.init),Set()).toString, Code("haskell")).moveTo(1),
+    "Dead Locks" -> view[System](x => Program.find(Set(x.main),Set()).toString, Code("haskell")).moveTo(1),
+    "Dead Locks2" -> view[System](x => Program.find2(x.main,0).toString, Code("haskell")).moveTo(1),
     // "My tests" -> view(x => x.toString, Text),
     // "Mermaid" -> view(x => x.toMermaid, Mermaid),
     "Global structure view" -> view(x =>Show.toMermaid(x.main,"GSV"), Mermaid),
@@ -44,8 +45,8 @@ object CaosConfig extends Configurator[System]:
     "Run semantics" -> steps(e=>e, Semantics, x => Show.toMermaid(x.main,"RS"), _.toString, Mermaid),
     "Run semantics with local structure" -> steps(e=>e, Semantics, x => Show.toMermaid_twoGraphs(x.main,"RSLS"), _.toString, Mermaid),
     "Build LTS" -> lts(x=>x, Semantics, x=>x.main.init, _.toString),
-    "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>x.main.init, _.toString),
-    "Two Graphs" -> view(x =>Show.toMermaid_twoGraphs_Bissi(x,"TG"), Mermaid),
+    // "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>x.main.init, _.toString),
+    "Two Reactive Graphs" -> view(x =>Show.toMermaid_twoGraphs_Bissi(x,"TG"), Mermaid),
     // "Build LTS" -> lts(x=>x, Semantics, x=>x.init, _.toString),
     // "Check" -> check(x=>Seq(x.toString)),
     // "Build LTS2" -> lts(x=>x, Semantics, x=>x.active.toString, _.toString),

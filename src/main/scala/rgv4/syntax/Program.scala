@@ -3,6 +3,7 @@ package rgv4.syntax
 import rgv4.syntax.Program.Edge.{HyperEdge, SimpleEdge}
 import scala.annotation.tailrec
 import scala.scalajs.js.`new`
+import cats.instances.boolean
 
 object Program:
   type State = String
@@ -101,17 +102,33 @@ object Program:
     then None
     else Some(gr.active--toDeactivate++toActivate)
 
-  def find(gr: RxGr, miss: Set[State], know: Set[State]): Boolean =
-    if miss.isEmpty then return true
-    var st = miss.head
+  def find(miss: Set[RxGr], know: Set[RxGr]): Boolean =
+    if know.size > 100 then return false
+    if miss.isEmpty then return false
+    var st: RxGr = miss.head
     var newmiss = miss.tail
-    val nextst = for case SimpleEdge(_,to,_,_) <- gr.getSe(st) yield to
-    if nextst.isEmpty then return false
-    for (i <- nextst){
-      if know.contains(i) then find(gr, miss - st,know)
-      else newmiss = newmiss + i
+    val nextgr =  (for (i <- st.nextEdg) yield step(st,i)).flatten 
+    if nextgr.isEmpty then return true
+    for (i <- nextgr){
+      if know.contains(i._1) then find(newmiss,know + st)
+      else newmiss = newmiss + i._1
+      
     }
-    find(gr,newmiss,know + st)
+    find(newmiss,know + st)
+
+
+  def find2(gr: RxGr, numit: Int, maxit: Int = 100): Boolean =
+    if numit > maxit then return false
+    var f: Boolean = false
+    if gr.nextEdg.isEmpty then return true
+    val nextgr: Set[RxGr] =  for i <- gr.nextEdg yield step(gr,i) match{
+        case None => gr.empty
+        case Some(value) => value._1
+      }
+    for (i <- nextgr){
+      f = find2(i,numit +1, maxit)
+    }
+    f
 
 
     // if gr.getSe(st).isEmpty then return false

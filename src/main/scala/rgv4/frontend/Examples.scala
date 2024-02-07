@@ -165,7 +165,9 @@ object Examples:
   val bissimulation: String =
     """init = 0;
     |l0 = { 0 --> 0 by act };
-    |ln = {}
+    |ln = {
+    |  ((0,0,act),(0,0,act),Circ,OFF),
+    |  ((0,0,act),((0,0,act),(0,0,act),Circ,OFF), Bullet,ON)}
     |~
     |init = 1;
     |l0 = { 1 --> 2 by act,

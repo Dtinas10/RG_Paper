@@ -1,8 +1,20 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala:112:43 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m112 |[0m      [33mif[0m know.contains(i.to) [33mthen[0m find(step(gr,i), miss - st,know)[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                                       ^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0mFound:    [1m[31mOption[0m[1m[31m[[0m[1m[31m([0mrgv4.syntax.Program.RxGr[1m[31m,[0m[1m[31m [0m[1m[31mSet[0m[1m[31m[[0m[1m[31mrgv4[0m[1m[31m.[0m[1m[31msyntax[0m[1m[31m.[0m[1m[31mProgram[0m[1m[31m.[0m[1m[31mAction[0m[1m[31m][0m[1m[31m)[0m[1m[31m][0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0mRequired: rgv4.syntax.Program.RxGr[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:39:53 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m39 |[0m    [31m"Dead Locks"[0m -> view[[35mSystem[0m]([36mx[0m => Program.find(x.main,Set(x.main.init),Set()).toString, Code([31m"haskell"[0m)).moveTo([31m1[0m),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                   ^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                           Found:    [1m[31m([0m[1m[31mx[0m[1m[31m.[0m[1m[31mmain[0m[1m[31m [0m[1m[31m:[0m[1m[31m [0mrgv4.syntax.Program.RxGr[1m[31m)[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                           Required: [1m[32mSet[0m[1m[32m[[0mrgv4.syntax.Program.RxGr[1m[32m][0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:39:69 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m39 |[0m    [31m"Dead Locks"[0m -> view[[35mSystem[0m]([36mx[0m => Program.find(x.main,Set(x.main.init),Set()).toString, Code([31m"haskell"[0m)).moveTo([31m1[0m),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                              ^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                     Found:    [1m[31m([0m[1m[31mx[0m[1m[31m.[0m[1m[31mmain[0m[1m[31m.[0m[1m[31minit[0m[1m[31m [0m[1m[31m:[0m[1m[31m [0mrgv4.syntax.Program.[1m[31mState[0m[1m[31m)[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                     Required: rgv4.syntax.Program.[1m[32mRxGr[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:39:78 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m39 |[0m    [31m"Dead Locks"[0m -> view[[35mSystem[0m]([36mx[0m => Program.find(x.main,Set(x.main.init),Set()).toString, Code([31m"haskell"[0m)).moveTo([31m1[0m),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                                           ^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0mtoo many arguments for [33mmethod[0m [35mfind[0m in [33mobject[0m [35mProgram[0m: (miss: Set[rgv4.syntax.Program.RxGr], know: Set[rgv4.syntax.Program.RxGr]):[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  Boolean[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m
