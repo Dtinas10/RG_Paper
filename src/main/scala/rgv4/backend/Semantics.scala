@@ -21,6 +21,10 @@ import rgv4.syntax.Program.System
 //     }
 //     s
 
+val cross = '\u274C' 
+val proibitionMark = '\u26D4' 
+val exclamationMark  = '\u2757' 
+
 object Semantics extends SOS[String,System]:
   def next[A>:String](st : System): Set[(A,System)] =
     val g: RxGr = st.main 
@@ -31,6 +35,9 @@ object Semantics extends SOS[String,System]:
         // s = s ++ Set((k.map(_._1).get.init + ": " + i.action,k.map(_._1).get))
         s = s ++ Set((i.action,System(k.map(_._1).get,st.toCompare)))
         // s = s ++ Set((i.action,RxGr(Map.empty,Map.empty," ",Set.empty)))
+      else 
+        // s = s ++ Set(("Warning: " + i.action,System(g.empty,st.toCompare)))
+        s = s ++ Set((s"${exclamationMark}Warning$exclamationMark: $cross ${i.action}",System(g.empty,st.toCompare)))
     }
     s
   

@@ -50,16 +50,11 @@ object Program:
     def nextEdg: Set[SimpleEdge] = getSe(init)
     /** Returns a new RxGr with SimpleEdges only*/
     def getLevel0: RxGr =  
-      var newactive: Set[Edge] = Set()
-      for (i <- active){
-        i match{
-          case e: SimpleEdge => newactive = newactive + e
-          case e: HyperEdge => newactive = newactive
-        }
-      }
+      val newactive = for case SimpleEdge(f,t,a,w) <- active yield SimpleEdge(f, t, a, w) 
       new RxGr(se,Map.empty,init,newactive)
       
-    def empty: RxGr = RxGr(Map.empty, Map.empty, " ", Set.empty)
+    def empty: RxGr = RxGr(Map.empty, Map.empty,"", Set.empty)
+    def isEmpty: Boolean = this == this.empty 
 
   /**
    * Evolves a reactive graph rxGr by performing a simple edge
@@ -111,8 +106,7 @@ object Program:
     if nextgr.isEmpty then return true
     for (i <- nextgr){
       if know.contains(i._1) then find(newmiss,know + st)
-      else newmiss = newmiss + i._1
-      
+      else newmiss = newmiss + i._1 
     }
     find(newmiss,know + st)
 
@@ -140,3 +134,5 @@ object Program:
 
   case class System(main:RxGr, toCompare:Option[RxGr]):
     def apply(newMain:RxGr) = System(newMain,toCompare)
+    override def toString: String = s"${main.init}${""}" 
+

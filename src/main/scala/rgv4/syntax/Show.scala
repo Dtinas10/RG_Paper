@@ -18,22 +18,19 @@ object Show:
   def toMermaid_twoGraphs_Bissi(st: System, id:String): String = 
     var s: String = st.toCompare match{
       case None => ""
-      case Some(t) => "\n subgraph Second Graph\n direction LR \n" + _toMermaid(t,"\n",".",id) + "\n end"
+      case Some(t) => _toMermaid(t,"\n subgraph Second Graph\n direction LR \n",".", "Bissi") + "\n end"
     }
-    _toMermaid(st.main, "flowchart LR \n subgraph First Graph  \n direction LR \n", "",id)  
-    + "\n end" + s
+    _toMermaid(st.main, "flowchart LR \n subgraph First Graph  \n direction LR \n", "",id)  + "\n end" + s
     
-
   /** Put the reactive graph RxGr in Mermaid Code*/
   def toMermaid(g: RxGr,id:String): String = _toMermaid(g,"flowchart LR \n","",id)
 
   /** Put the RG in Mermaid Code + RG with level0 only in Mermaid Code*/ 
   def toMermaid_twoGraphs(g:RxGr,id:String): String = 
-    _toMermaid(g, "flowchart LR \n subgraph Global View  \n direction LR \n", "",id)  
-    + "\n end \n subgraph Local View \n direction LR \n" 
-    + _toMermaid(g.getLevel0,"\n",".",id) + "\n end"
+    _toMermaid(g, "flowchart LR \n subgraph Global View  \n direction LR \n", "",id)   
+    + _toMermaid(g.getLevel0,"\n end \n subgraph Local View \n direction LR \n",".",id) + "\n end"
   
-  /* put the RA in mermaid Code wich  received 3 arguments:
+  /* put the RA in mermaid Code wich  received 4 arguments:
     g:RxGr -> is the RA
     sInital:String ->  is the string two begin a mermaid
     s2:String -> is the string to change name' nodes  for level0 only
@@ -42,7 +39,9 @@ object Show:
     val colors: List[String] = List("gold", "red","blue","gray","orange","pink","green","purple") //miss and black
     // var mermaid = "```mermaid \nflowchart LR \n"
     var mermaid = sInitial //"flowchart LR \n"
-    
+
+    if g.isEmpty then return mermaid + s"A$s2[\\WARNING/] \n style A$s2 fill:#ff0000,stroke:#333,stroke-width:4px,color:#fff"
+
     //Counter to put style in edges
     var numLinhas: Int = 0
 
@@ -110,7 +109,8 @@ object Show:
       }
     }
 
-    mermaid +=  "style " + g.init + id + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
+    if id != "Bissi" then
+      mermaid +=  "style " + g.init + id + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
     mermaid +=  "style " + s2 + g.init + id + " fill:#8f7,stroke:#363,stroke-width:4px \n" //+"```"
     mermaid
   }

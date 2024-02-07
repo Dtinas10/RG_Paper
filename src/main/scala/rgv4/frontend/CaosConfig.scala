@@ -36,6 +36,7 @@ object CaosConfig extends Configurator[System]:
   /** Description of the widgets that appear in the dashboard. */
   val widgets = List(
     "View pretty data" -> view[System](x => Show.toMermaid(x.main,"VPD"), Code("haskell")).moveTo(1),
+    // "ISEMPTY" -> view[System](x => x.main.empty.isEmpty.toString, Code("haskell")).moveTo(1),
     "Dead Locks" -> view[System](x => Program.find(Set(x.main),Set()).toString, Code("haskell")).moveTo(1),
     "Dead Locks2" -> view[System](x => Program.find2(x.main,0).toString, Code("haskell")).moveTo(1),
     // "My tests" -> view(x => x.toString, Text),
@@ -43,6 +44,7 @@ object CaosConfig extends Configurator[System]:
     "Global structure view" -> view(x =>Show.toMermaid(x.main,"GSV"), Mermaid),
     "Local structure view" -> view(x => Show.toMermaid(x.main.getLevel0,"LSV"), Mermaid),
     "Run semantics" -> steps(e=>e, Semantics, x => Show.toMermaid(x.main,"RS"), _.toString, Mermaid),
+    // "Run semanticstext" -> steps(e=>e, Semantics, x => Show.toMermaid(x.main,"RS"), _.toString, Text),
     "Run semantics with local structure" -> steps(e=>e, Semantics, x => Show.toMermaid_twoGraphs(x.main,"RSLS"), _.toString, Mermaid),
     "Build LTS" -> lts(x=>x, Semantics, x=>x.main.init, _.toString),
     // "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>x.main.init, _.toString),
