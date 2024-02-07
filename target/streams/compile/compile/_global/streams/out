@@ -1,13 +1,8 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:53:13 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m53 |[0m        [36mx[0m => s.toString2, x => s.toString2, _.toString),[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m             ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m             Not found: s[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:53:31 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m53 |[0m        [36mx[0m => s.toString2, x => s.toString2, _.toString),[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                               ^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                               Not found: s[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\syntax\Program.scala:112:43 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m112 |[0m      [33mif[0m know.contains(i.to) [33mthen[0m find(step(gr,i), miss - st,know)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m                                       ^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0mFound:    [1m[31mOption[0m[1m[31m[[0m[1m[31m([0mrgv4.syntax.Program.RxGr[1m[31m,[0m[1m[31m [0m[1m[31mSet[0m[1m[31m[[0m[1m[31mrgv4[0m[1m[31m.[0m[1m[31msyntax[0m[1m[31m.[0m[1m[31mProgram[0m[1m[31m.[0m[1m[31mAction[0m[1m[31m][0m[1m[31m)[0m[1m[31m][0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0mRequired: rgv4.syntax.Program.RxGr[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

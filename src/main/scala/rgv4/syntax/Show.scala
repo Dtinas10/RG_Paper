@@ -2,6 +2,7 @@ package rgv4.syntax
 
 import rgv4.syntax.Program.*
 import rgv4.syntax.Program.RxGr.*
+import rgv4.syntax.Program.System
 import rgv4.syntax.Program.Edge.*
 
 
@@ -10,6 +11,18 @@ import rgv4.syntax.Program.Edge.*
  */
 object Show:
 
+  def justTerm(s: System): String = s.main.init
+
+  // def apply(g: RxGr): String = if g.nextEdg.isEmpty then "NONE" else g.nextEdg.head.pretty
+
+  def toMermaid_twoGraphs_Bissi(st: System, id:String): String = 
+    var s: String = st.toCompare match{
+      case None => ""
+      case Some(t) => "\n subgraph Second Graph\n direction LR \n" + _toMermaid(t,"\n",".",id) + "\n end"
+    }
+    _toMermaid(st.main, "flowchart LR \n subgraph First Graph  \n direction LR \n", "",id)  
+    + "\n end" + s
+    
 
   /** Put the reactive graph RxGr in Mermaid Code*/
   def toMermaid(g: RxGr,id:String): String = _toMermaid(g,"flowchart LR \n","",id)

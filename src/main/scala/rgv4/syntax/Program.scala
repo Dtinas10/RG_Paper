@@ -57,6 +57,8 @@ object Program:
         }
       }
       new RxGr(se,Map.empty,init,newactive)
+      
+    def empty: RxGr = RxGr(Map.empty, Map.empty, " ", Set.empty)
 
   /**
    * Evolves a reactive graph rxGr by performing a simple edge
@@ -99,12 +101,25 @@ object Program:
     then None
     else Some(gr.active--toDeactivate++toActivate)
 
+  def find(gr: RxGr, miss: Set[State], know: Set[State]): Boolean =
+    if miss.isEmpty then return true
+    var st = miss.head
+    var newmiss = miss.tail
+    val nextst = for case SimpleEdge(_,to,_,_) <- gr.getSe(st) yield to
+    if nextst.isEmpty then return false
+    for (i <- nextst){
+      if know.contains(i) then find(gr, miss - st,know)
+      else newmiss = newmiss + i
+    }
+    find(gr,newmiss,know + st)
 
-  // object Examples:
-  //   val e12: SimpleEdge = SimpleEdge(1,2,"a")
-  //   val e23: SimpleEdge = SimpleEdge(2,3,"b")
-  //   val h1223: HyperEdge = HyperEdge(e12,e23,"c",0.0,true)
-  //   val gr1: RxGr =
-  //     RxGr( Map(1->Set(e12)), Map(e12 -> Set(h1223)), 1, Set(e12,h1223))
 
-  //   try step(gr1,e12)
+    // if gr.getSe(st).isEmpty then return false
+    // for (i <- gr.getSe(st)){
+    //   var newgr = step(gr,i)
+    //   if know.contains(newgr.init) then find(newgr,miss - st, know)
+    //   know = know + newgr.init
+    // } 
+
+  case class System(main:RxGr, toCompare:Option[RxGr]):
+    def apply(newMain:RxGr) = System(newMain,toCompare)

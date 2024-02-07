@@ -1,0 +1,13 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(fastLinkJS, Some(8fa423f7-f3fc-4982-9bc5-13f66491e018), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / fastLinkJS[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to C:\Users\DavidTinoco\Desktop\RG\RG_Paper\target\scala-3.3.1\classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E008] Not Found Error: C:\Users\DavidTinoco\Desktop\RG\RG_Paper\src\main\scala\rgv4\frontend\CaosConfig.scala:54:65 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m54 |[0m        ([36me[0m: [35mSystem[0m) => System(e.toCompare.getOrElse(Program.RxGr.empty), None),[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                                                    ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m          value empty is not a member of object rgv4.syntax.Program.RxGr[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 0 -- invalidated: 0 -- trees read: 0[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 1 s, completed 06/02/2024, 20:16:47[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

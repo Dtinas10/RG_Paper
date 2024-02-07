@@ -5,12 +5,13 @@ import caos.frontend.{Configurator, Documentation}
 import caos.view.*
 import rgv4.backend.*
 import rgv4.syntax.Program.RxGr
+import rgv4.syntax.Program.System
 import rgv4.syntax.{Program, Show}
 import rgv4.syntax.Parser 
 import rgv4.frontend.Examples.*
 
 /** Object used to configure which analysis appear in the browser */
-object CaosConfig extends Configurator[RxGr]:
+object CaosConfig extends Configurator[System]:
   val name = "Animator of Multi-Action Switch Reactive Graphs"
   override val languageName: String = "Input program"
 
@@ -29,28 +30,32 @@ object CaosConfig extends Configurator[RxGr]:
     "Inconsistency" -> Examples.inconsistency -> "Example of Reactive Graph with an inconsistency.",
     "Example" -> Examples.exampleOfReport -> "Example of Report",
     "Ex1" -> Examples.ex1,
+    "Bissim" -> Examples.bissimulation,
     )
 
   /** Description of the widgets that appear in the dashboard. */
   val widgets = List(
-    "View pretty data" -> view[RxGr](x => Show.toMermaid(x,"VPD"), Code("haskell")).moveTo(1),
+    "View pretty data" -> view[System](x => Show.toMermaid(x.main,"VPD"), Code("haskell")).moveTo(1),
+    "Dead Locks" -> view[System](x => Program.find(x.main,Set(x.main.init),Set()).toString, Code("haskell")).moveTo(1),
     // "My tests" -> view(x => x.toString, Text),
     // "Mermaid" -> view(x => x.toMermaid, Mermaid),
-    "Global structure view" -> view(x =>Show.toMermaid(x,"GSV"), Mermaid),
-    "Local structure view" -> view(x => Show.toMermaid(x.getLevel0,"LSV"), Mermaid),
-    "Run semantics" -> steps(e=>e, Semantics, x => Show.toMermaid(x,"RS"), _.toString, Mermaid),
-    "Run semantics with local structure" -> steps(e=>e, Semantics, x => Show.toMermaid_twoGraphs(x,"RSLS"), _.toString, Mermaid),
-    "Build LTS" -> lts(x=>x, Semantics, x=>x.init, _.toString),
+    "Global structure view" -> view(x =>Show.toMermaid(x.main,"GSV"), Mermaid),
+    "Local structure view" -> view(x => Show.toMermaid(x.main.getLevel0,"LSV"), Mermaid),
+    "Run semantics" -> steps(e=>e, Semantics, x => Show.toMermaid(x.main,"RS"), _.toString, Mermaid),
+    "Run semantics with local structure" -> steps(e=>e, Semantics, x => Show.toMermaid_twoGraphs(x.main,"RSLS"), _.toString, Mermaid),
+    "Build LTS" -> lts(x=>x, Semantics, x=>x.main.init, _.toString),
+    "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>x.main.init, _.toString),
+    "Two Graphs" -> view(x =>Show.toMermaid_twoGraphs_Bissi(x,"TG"), Mermaid),
     // "Build LTS" -> lts(x=>x, Semantics, x=>x.init, _.toString),
     // "Check" -> check(x=>Seq(x.toString)),
     // "Build LTS2" -> lts(x=>x, Semantics, x=>x.active.toString, _.toString),
     //  "Build LTS" -> lts((e:System)=>e, Semantics, Show.justTerm, _.toString).expand,
     //  "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, x=>Show(x.main), _.toString),
-    // "Find strong bisimulation (given a program \"A ~ B\")" ->
-    //   compareStrongBisim(Semantics, Semantics,
-    //     (e: RxGr) => e,
-    //     (e: RxGr) => e.getLevel0,
-    //     x => x.toString2, x => x.toString2, _.toString),
+    "Find strong bisimulation (given a program \"A ~ B\")" ->
+      compareStrongBisim(Semantics, Semantics,
+        (e: System) => System(e.main, None),
+        (e: System) => System(e.toCompare.getOrElse(RxGr(Map.empty, Map.empty, " ", Set.empty)), None),
+        Show.justTerm, Show.justTerm, _.toString),
   )
 
   //// Documentation below

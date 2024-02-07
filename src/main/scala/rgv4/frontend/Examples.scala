@@ -31,7 +31,7 @@ object Examples:
       |  2 -.-> 0 by c};
       |ln = {
       |	((0,1,a), (1,2,b),Bullet,ON),
-      |  (((0,1,a), (1,2,b),Bullet,ON), (2,c),Bullet,ON)}
+      |  (((0,1,a), (1,2,b),Bullet,ON), (2,0,c),Bullet,ON)}
     """.stripMargin
 
   val gabbayExample:String = 
@@ -66,9 +66,9 @@ object Examples:
     """init = 0;
       |l0 = { 0 --> 0 by act };
       |ln = {
-      |  ((0,act),(0,act),Circ,OFF),
-      |  ((0,act),((0,act),(0,act),Circ,OFF), Circ,ON),
-      |  ((0,act),((0,act),((0,act),(0,act),Circ,OFF), Circ,ON),Bullet,ON)}
+      |  ((0,0,act),(0,0,act),Circ,OFF),
+      |  ((0,0,act),((0,0,act),(0,0,act),Circ,OFF), Circ,ON),
+      |  ((0,0,act),((0,0,act),((0,0,act),(0,0,act),Circ,OFF), Circ,ON),Bullet,ON)}
     """.stripMargin
   
   val featureModel:String =
@@ -110,23 +110,23 @@ object Examples:
       |  Apple --> Insert by Get_apple,
       |  Chocolate --> Insert by Get_choc};
       |ln = {
-      |  ((Insert,Chocolate,1$),(Insert,Cofee.5$),Bullet,OFF),
-      |  ((Insert,Chocolate,1$),(Insert,Apple.5$),Bullet,OFF),
+      |  ((Insert,Chocolate,1$),(Insert,Cofee,0.5$),Bullet,OFF),
+      |  ((Insert,Chocolate,1$),(Insert,Apple,0.5$),Bullet,OFF),
       |  ((Insert,Chocolate,1$),(Insert,Chocolate,1$),Bullet,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Cofee.5$),Circ,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Chocolate,1$),Bullet,OFF),
-      |  ((Insert,Cofee.5$),((Insert,Cofee.5$),(Insert,Cofee.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Cofee.5$),((Insert,Apple.5$),(Insert,Apple.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Apple.5$),(Insert,Apple.5$),Circ,OFF),
-      |  ((Insert,Apple.5$),(Insert,Chocolate,1$),Bullet,OFF),
-      |  ((Insert,Apple.5$),((Insert,Apple.5$),(Insert,Apple.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Apple.5$),((Insert,Cofee.5$),(Insert,Cofee.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Apple.5$),(Insert,Cofee.5$),Circ,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Apple.5$),Circ,OFF),
-      |  ((Insert,Apple.5$),((Insert,Apple.5$),(Insert,Cofee.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Cofee.5$),((Insert,Apple.5$),(Insert,Cofee.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Apple.5$),((Insert,Cofee.5$),(Insert,Apple.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Cofee.5$),((Insert,Cofee.5$),(Insert,Apple.5$),Circ,OFF),Bullet,ON)}
+      |  ((Insert,Cofee,0.5$),(Insert,Cofee,0.5$),Circ,OFF),
+      |  ((Insert,Cofee,0.5$),(Insert,Chocolate,1$),Bullet,OFF),
+      |  ((Insert,Cofee,0.5$),((Insert,Cofee,0.5$),(Insert,Cofee,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Cofee,0.5$),((Insert,Apple,0.5$),(Insert,Apple,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Apple,0.5$),(Insert,Apple,0.5$),Circ,OFF),
+      |  ((Insert,Apple,0.5$),(Insert,Chocolate,1$),Bullet,OFF),
+      |  ((Insert,Apple,0.5$),((Insert,Apple,0.5$),(Insert,Apple,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Apple,0.5$),((Insert,Cofee,0.5$),(Insert,Cofee,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Apple,0.5$),(Insert,Cofee,0.5$),Circ,OFF),
+      |  ((Insert,Cofee,0.5$),(Insert,Apple,0.5$),Circ,OFF),
+      |  ((Insert,Apple,0.5$),((Insert,Apple,0.5$),(Insert,Cofee,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Cofee,0.5$),((Insert,Apple,0.5$),(Insert,Cofee,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Apple,0.5$),((Insert,Cofee,0.5$),(Insert,Apple,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Cofee,0.5$),((Insert,Cofee,0.5$),(Insert,Apple,0.5$),Circ,OFF),Bullet,ON)}
     """.stripMargin
 
   val vendingMachine2: String = 
@@ -139,14 +139,14 @@ object Examples:
       |  Chips --> Insert by Get_apple,
       |  Chocolate --> Insert by Get_choc};
       |ln = {
-      |  ((Insert,Chocolate,1$),(Insert,Cofee.5$),Bullet,OFF),
+      |  ((Insert,Chocolate,1$),(Insert,Cofee,0.5$),Bullet,OFF),
       |  ((Insert,Chocolate,1$),(Insert,Chips,1$),Bullet,OFF),
       |  ((Insert,Chocolate,1$),(Insert,Chocolate,1$),Bullet,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Cofee.5$),Circ,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Chocolate,1$),Bullet,OFF),
-      |  ((Insert,Cofee.5$),(Insert,Chips,1$),Bullet,OFF),
-      |  ((Insert,Cofee.5$),((Insert,Cofee.5$),(Insert,Cofee.5$),Circ,OFF),Bullet,ON),
-      |  ((Insert,Chips,1$),(Insert,Cofee.5$),Bullet,OFF),
+      |  ((Insert,Cofee,0.5$),(Insert,Cofee,0.5$),Circ,OFF),
+      |  ((Insert,Cofee,0.5$),(Insert,Chocolate,1$),Bullet,OFF),
+      |  ((Insert,Cofee,0.5$),(Insert,Chips,1$),Bullet,OFF),
+      |  ((Insert,Cofee,0.5$),((Insert,Cofee,0.5$),(Insert,Cofee,0.5$),Circ,OFF),Bullet,ON),
+      |  ((Insert,Chips,1$),(Insert,Cofee,0.5$),Bullet,OFF),
       |  ((Insert,Chips,1$),(Insert,Chips,1$),Bullet,OFF),
       |  ((Insert,Chips,1$),(Insert,Chocolate,1$),Bullet,OFF)}
     """.stripMargin
@@ -154,12 +154,23 @@ object Examples:
   val inconsistency: String =
     """init = s;
     |l0 = {
-    |  s --> s0 by a,1,
+    |  s --> s0 by a,
     |  s0 --> s1 by a,
     |  s1 -.-> s2 by b};
     |ln ={
     |  ((s0,s1,a),(s1,s2,b),Bullet,ON),
     |  ((s0,s1,a),(s1,s2,b),Bullet,OFF)}
+    """.stripMargin
+
+  val bissimulation: String =
+    """init = 0;
+    |l0 = { 0 --> 0 by act };
+    |ln = {}
+    |~
+    |init = 1;
+    |l0 = { 1 --> 2 by act,
+    |2 --> 3 by act};
+    |ln = {}
     """.stripMargin
     
 // init = 0; 

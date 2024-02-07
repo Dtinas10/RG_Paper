@@ -6,14 +6,13 @@ import cats.parse.Rfc5234.{sp, alpha, digit}
 import rgv4.syntax.Program.*
 import rgv4.syntax.Program.RxGr.*
 import rgv4.syntax.Program.Edge.*
-// import reactive_graphs.syntax.Program.Term.*
 
 import scala.sys.error
 
 object Parser :
 
   // /** Parse a command  */
-  def parseProgram(str:String):RxGr = 
+  def parseProgram(str:String):System = 
     
     pp(program,str) match {
       case Left(e) => error(e)
@@ -167,13 +166,18 @@ object Parser :
 
   private def init: P[State] = ((P.string("init") *> P.char('=').surroundedBy(sps)) *> state).map(x => String(x))
 
-  private def program: P[RxGr] = 
+  private def oneProgram: P[RxGr] = 
       (( init.surroundedBy(sps) <* P.char(';').surroundedBy(sps)) ~
       (level0.surroundedBy(sps) <* P.char(';').surroundedBy(sps)) ~
       levelN.surroundedBy(sps)) 
       .map{ case (((init,se),he)) => 
         RxGr(se._1, he._1, init, se._2 ++ he._2)
   }
+
+  private def program: P[System] =
+    ((oneProgram.surroundedBy(sps)) ~
+    ((char('~').surroundedBy(sps) *> oneProgram.surroundedBy(sps)).?))
+      .map((x,y) => System(x,y))
 
   //////////////////////////////
   // Examples and experiments //
