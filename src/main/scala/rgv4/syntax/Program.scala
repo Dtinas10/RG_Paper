@@ -64,9 +64,9 @@ object Program:
    *         or a new graph by updating the init state and the active edges,
    *         together with all action labels involved.
    */
-  def step(rxGr: RxGr, se:SimpleEdge): Option[(RxGr,Set[Action])] =
+  def step(rxGr: RxGr, se:SimpleEdge): Option[(RxGr,Set[Action])] = // | String =
     // stop if the edge is not active
-    if !rxGr.active(se) then return None
+    if !rxGr.active(se) then return None //"The edge are disable"
     // collect edges involved
     val edges =
       collectEdges(rxGr,rxGr.getHe(se),Set(se))
@@ -97,40 +97,57 @@ object Program:
     then None
     else Some(gr.active--toDeactivate++toActivate)
 
-  def find(miss: Set[RxGr], know: Set[RxGr]): Boolean =
-    if know.size > 100 then return false
+  def find(miss: Set[RxGr], know: Set[RxGr], it: Int, maxit: Int = 15): Boolean =
+    if it > maxit then return false
     if miss.isEmpty then return false
     var st: RxGr = miss.head
     var newmiss = miss.tail
-    val nextgr =  (for (i <- st.nextEdg) yield step(st,i)).flatten 
+    val nextgr =  for i <- st.nextEdg yield step(st,i) match{
+      case None => st.empty
+      case Some(value) => value._1
+    }
     if nextgr.isEmpty then return true
     for (i <- nextgr){
-      if know.contains(i._1) then find(newmiss,know + st)
-      else newmiss = newmiss + i._1 
+      if know.contains(i) then find(newmiss,know + st,it+1)
+      else newmiss = newmiss + i
     }
-    find(newmiss,know + st)
+    find(newmiss,know + st,it+1)
 
 
-  def find2(gr: RxGr, numit: Int, maxit: Int = 100): Boolean =
-    if numit > maxit then return false
-    var f: Boolean = false
-    if gr.nextEdg.isEmpty then return true
-    val nextgr: Set[RxGr] =  for i <- gr.nextEdg yield step(gr,i) match{
-        case None => gr.empty
-        case Some(value) => value._1
-      }
+
+  //Not Working
+  def findInconsitency(miss: Set[RxGr], know: Set[RxGr], it: Int, maxit: Int = 15): String =
+    var state = "Not found in "+ maxit + " steps."
+    if it > maxit then return state
+    if miss.isEmpty then return state
+    var st: RxGr = miss.head
+    var newmiss = miss.tail
+    val nextgr: Set[RxGr] =  for i <- st.nextEdg yield step(st,i) match{
+      case None =>
+        st.se.get(st.init) match{
+          case Some(t) => 
+            if t.contains(i) then 
+             st
+            else{
+              state = "Inconsistency in state "+ st.init +" throw "+ i.action
+              st.empty  
+            }
+          case None => 
+            state = "Inconsistency in state "+ st.init +" throw "+ i.action
+            st.empty 
+        }  
+      case Some(value) => value._1
+    }
+    if nextgr.contains(st.empty) then return state
+    // if state != "Not found in "+ maxit + " steps." then return state
     for (i <- nextgr){
-      f = find2(i,numit +1, maxit)
+      if know.contains(i) then findInconsitency(newmiss,know + st,it + 1)
+      else newmiss = newmiss + i 
     }
-    f
+    findInconsitency(newmiss,know + st,it + 1)
 
 
-    // if gr.getSe(st).isEmpty then return false
-    // for (i <- gr.getSe(st)){
-    //   var newgr = step(gr,i)
-    //   if know.contains(newgr.init) then find(newgr,miss - st, know)
-    //   know = know + newgr.init
-    // } 
+
 
   case class System(main:RxGr, toCompare:Option[RxGr]):
     def apply(newMain:RxGr) = System(newMain,toCompare)
