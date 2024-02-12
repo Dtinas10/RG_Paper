@@ -1,6 +1,8 @@
 package rgv4.syntax
 
+import caos.sos.SOS
 import rgv4.syntax.Program.Edge.{HyperEdge, SimpleEdge}
+
 import scala.annotation.tailrec
 import scala.scalajs.js.`new`
 import cats.instances.boolean
@@ -113,7 +115,32 @@ object Program:
     }
     find(newmiss,know + st,it+1)
 
+  /**
+   * Searches for a deadlock state of a system
+   * @param g initial graph
+   * @param maxit maximal number of states to traverse before timing out
+   * @return String explaining the search result.
+   */
+  def findDeadlockPP(g:System,maxit: Int = 500): String =
+    findDeadlock(Set(g),Set(),maxit)(using rgv4.backend.Semantics) match
+      case (None,0) => s"No deadlocks found, but stopped after $maxit states."
+      case (None,n) => s"No deadlocks found after ${maxit-n} states"
+      case (Some(g),n) => s"Found deallock @ ${g}"
 
+  // I implemented findDeadlock for any SOS, but I could have done it just for "System".
+  def findDeadlock[Act,St](miss: Set[St], know: Set[St], maxit: Int)(using sos: SOS[Act,St]): (Option[St],Int) =
+    if maxit <= 0 then (None,0)          // reached maximum iterations
+    else miss.headOption match
+      case None => (None,maxit)            // no more states to traverse
+      case Some(nextSt) if know(nextSt) => // next state exists but is known
+        findDeadlock(miss-nextSt,know,maxit)
+      case Some(nextSt) =>                 // next state exists and is new
+        val more = sos.next(nextSt)
+        if more.isEmpty
+        then (Some(nextSt),maxit)
+        else
+          val newMiss = (miss-nextSt) ++ more.map(_._2)
+          findDeadlock(newMiss, know+nextSt, maxit-1)
 
   //Not Working
   def findInconsitency(miss: Set[RxGr], know: Set[RxGr], it: Int, maxit: Int = 15): String =
