@@ -76,7 +76,7 @@ object CaosConfig extends Configurator[System]:
 
   override val documentation: Documentation = List(
     languageName -> "More information on the syntax of Reactive Graph" ->
-    """|A program <code>RG</code> in Reactive Graph is given by the following grammar:
+    """|A program <code>RG</code> is a Reactive Graph with a syntax that follows the following template:
        |<pre>
        |init = Initial State;
        |l0 = {
@@ -88,16 +88,18 @@ object CaosConfig extends Configurator[System]:
        |
        |</pre>
        |
-       |</p>"init" is the current state; </p>
-       |</p>"l0" is the level 0 edges, use --> if edge is enable, and -.-> if edge are disable; </p>
-       |</p>"ln" is the hyper edges, this type can start and ends in hyper edge (HE) or level 0 edge (E). Each edge is defined by recursion, then, the space HE from and HE to, is another edge in the same form, i.e. (HE From, HE to, weight, action, function); </p>
-       |</p>"action" is a string without spaces and is acepted any letter in lower or upper case, any digit and these characters '_', '<','>','.','-','€' and '$'; </p>
-       |</p>"weight" is a number, can be float or not; </p>
-       |</p>"funtion" can be 'ON' or 'OFF', if the edge enable or disable other edges, respectively.</p>
+       |where:
+       |</p><code>init</code> is the initial state; </p>
+       |</p><code>l0</code> is a set of level 0 edges (E); use <code>--></code> to represent an enabled edge and <code>-.-></code> a disable edge; </p>
+       |</p><code>ln</code> is a set of hyper edges (GE); these can start and end in either E or another HE. 
+       | An HE is defined recursively, i.e., both the "from" and the "to" fields can be another HE, or a simpler E in the base case;</p>
+       |</p><code>action</code> is a string that labels an E; it can have only letters in lower or upper case,  digits, and the symbols <code>_</code>, <code><</code>, <code>></code>, <code>.</code>, <code>-</code>, <code>€</code>, and <code>$</code>; </p>
+       |</p><code>weight</code> is a number; can be float or an integer; </p>
+       |</p><code>funtion</code> is either <code>ON</code> or <code>OFF</code>; representing whether the HE enables or disables the target edge, respectively.</p>
        """.stripMargin,
-    "Build LTS" -> "More information on the operational rules used here" -> sosRules,
-    "Build LTS (explore)" -> "More information on the operational rules used here" -> sosRules,
-    "Run semantics" -> "More information on the operational rules used here" -> sosRules,
+    //"Build LTS" -> "More information on the operational rules used here" -> sosRules,
+    //"Build LTS (explore)" -> "More information on the operational rules used here" -> sosRules,
+    //"Run semantics" -> "More information on the operational rules used here" -> sosRules,
     "Find strong bisimulation (given a program \"A ~ B\")" -> "More information on this widget" ->
      ("<p>When the input consists of the comparison of 2 programs separated by <code>~</code>, this widget " +
        "searches for a (strong) bisimulation between these 2 programs, providing either a " +
