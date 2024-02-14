@@ -142,6 +142,34 @@ object Program:
           val newMiss = (miss-nextSt) ++ more.map(_._2)
           findDeadlock(newMiss, know+nextSt, maxit-1)
 
+  def findDeadlockTracePP(g:System,maxit: Int = 500): String =
+    findDeadlockTrace(Map(g->None),Map(),maxit)(using rgv4.backend.Semantics) match
+      case (_,None,0) => s"No deadlocks found, but stopped after $maxit states."
+      case (_,None,n) => s"No deadlocks found after ${maxit-n} states"
+      case (trace,Some(g),n) => s"Found deallock @ ${g} ${trace.map(ap=>s"\n   <-[${ap._1}]- ${ap._2}").mkString}"
+
+  def findDeadlockTrace[Act, St](miss: Map[St,Option[(Act,St)]],
+                                 know: Map[St,Option[(Act,St)]],
+                                 maxit: Int)(using sos: SOS[Act, St]): (Seq[(Act,St)],Option[St], Int) =
+    def buildTrace(parent:Option[(Act,St)]): List[(Act,St)] =
+      parent match
+        case None => List[(Act,St)]()
+        case Some((act,prev)) => (act,prev)::buildTrace(know.getOrElse(prev,None))
+
+    if maxit <= 0 then (Nil,None, 0) // reached maximum iterations
+    else miss.headOption match
+      case None => (Nil,None, maxit) // no more states to traverse
+      case Some((nextSt,_)) if know contains nextSt => // next state exists but is known
+        findDeadlockTrace(miss - nextSt, know, maxit)
+      case Some((nextSt,parent)) => // next state exists and is new
+        val more = sos.next(nextSt)
+        if more.isEmpty
+        then (buildTrace(parent),Some(nextSt), maxit)
+        else
+          val newMiss = (miss - nextSt) ++
+            more.map(kv=>(kv._2,Some(kv._1->nextSt)))
+          findDeadlockTrace(newMiss, know + (nextSt->parent), maxit - 1)
+
   //Not Working
   def findInconsitency(miss: Set[RxGr], know: Set[RxGr], it: Int, maxit: Int = 15): String =
     var state = "Not found in "+ maxit + " steps."

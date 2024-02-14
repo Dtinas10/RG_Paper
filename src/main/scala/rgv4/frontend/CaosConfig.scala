@@ -38,6 +38,7 @@ object CaosConfig extends Configurator[System]:
     "View pretty data" -> view[System](x => Show.toMermaid(x.main,""), Code("haskell")).moveTo(1),
     "Dead Locks" -> view[System](x => Program.find(Set(x.main),Set(),0).toString, Code("haskell")).moveTo(1),
     "Dead Locks 2" -> view[System](Program.findDeadlockPP(_), Text).moveTo(1),
+    "Dead Locks 3" -> view[System](Program.findDeadlockTracePP(_), Text).moveTo(1),
     "Inconsistency" -> view[System](x => Program.findInconsitency(Set(x.main),Set(),0).toString, Code("haskell")).moveTo(1),
     // "My tests" -> view(x => x.toString, Text),
     // "Mermaid" -> view(x => x.toMermaid, Mermaid),
